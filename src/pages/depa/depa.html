@@ -1,0 +1,29 @@
+<!--
+  Generated template for the DepaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title style="background-color: #F1FFC4 ;  text-align: center"> {{producto.producto}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style= "background-color: #9ed0e6">
+    <img [src]= producto.imagen>
+    <h4>Ubicación: {{producto.ubicacion}}</h4>
+    <h4>{{producto.precio}}</h4>
+    <h4>Antigüedad: {{producto.antiguedad}}</h4>
+    <h4>Terreno: {{producto.terreno}}</h4>
+    <h4>Construccion: {{producto.construccion}}</h4>
+    <h4>Recamaras: {{producto.cuartos}}</h4>
+    <h4>Baños: {{producto.banos}}</h4>
+    <h4>{{producto.nombre}}</h4>
+    <h4>{{producto.tel}}</h4>
+
+    <button ion-button  color="dark" block (click)= "clickAgregar()">Agregar a mi lista</button>
+</ion-content>

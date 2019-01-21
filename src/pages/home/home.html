@@ -1,14 +1,24 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+    <ion-toolbar>
+        <ion-title style="background-color: #F1FFC4 ;  text-align: center">Bienes raíces</ion-title>
+        <ion-buttons end>
+          <button ion-button icon-only (click)="clickFav()">
+              <ion-icon name="star"></ion-icon>
+          </button>
+        </ion-buttons>
+      </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding style="background-color: black">
+      
+  <ion-card style="border-radius:10px" *ngFor="let d of depas" (click)="clickDepa(d)">
+    <ion-item style= "background-color: #9ed0e6">
+      <ion-col item-start>
+        <img [src]=d.imagen>
+      </ion-col>
+      <h2>{{d.producto}}</h2>
+      <p>{{d.ubicacion}}</p>
+      <p>{{d.precio}}</p>
+    </ion-item>
+  </ion-card>
 </ion-content>
